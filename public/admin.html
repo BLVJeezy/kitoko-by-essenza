@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Beheer — Kitoko by Essenza</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/admin.js"></script>
+  </head>
+  <body>
+    <div class="announcement">KITOKO BY ESSENZA · BEHEEROMGEVING</div>
+    <header>
+      <a class="brand" href="/">Kitoko<span>BY ESSENZA</span></a
+      ><a href="/">Naar de winkel ↗</a>
+    </header>
+    <main class="admin-main">
+      <p id="status" role="status"></p>
+      <section id="login-panel" class="panel">
+        <h1>Welkom terug.</h1>
+        <p>Log in om je collectie en bestellingen te beheren.</p>
+        <form id="login">
+          <label
+            >E-mailadres<input
+              type="email"
+              name="email"
+              required
+              autocomplete="username" /></label
+          ><label
+            >Wachtwoord<input
+              type="password"
+              name="password"
+              required
+              autocomplete="current-password" /></label
+          ><button class="button">Inloggen</button>
+        </form>
+      </section>
+      <section id="dashboard" hidden>
+        <div class="admin-top">
+          <h1>Jouw winkel.</h1>
+          <button id="logout" class="secondary">Uitloggen</button>
+        </div>
+        <div class="demo-banner">
+          Testomgeving. Betaalstatussen worden handmatig bijgehouden; er is nog
+          geen betaalprovider gekoppeld. Annuleren vult de voorraad eenmalig
+          aan. Een betaalstatus wijzigen voert geen geldtransactie uit.
+        </div>
+        <div class="admin-grid">
+          <section class="panel">
+            <div class="admin-top">
+              <h2>Collectie</h2>
+              <button id="new" class="secondary">+ Product</button>
+            </div>
+            <div id="product-list"></div>
+          </section>
+          <section class="panel">
+            <h2 id="edit-title">Nieuw product</h2>
+            <form id="product-form">
+              <input type="hidden" name="id" /><label
+                >Productnaam<input
+                  name="name"
+                  required
+                  maxlength="120" /></label
+              ><label
+                >Categorie<input
+                  name="category"
+                  required
+                  value="Wasparfum" /></label
+              ><label
+                >Beschrijving<textarea
+                  name="description"
+                  rows="4"
+                ></textarea></label
+              ><label
+                >Prijs in euro<input
+                  name="price"
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  required /></label
+              ><label
+                >Voorraad<input
+                  name="stock"
+                  type="number"
+                  min="0"
+                  step="1"
+                  required /></label
+              ><label
+                >Inhoud / variant<input
+                  name="size"
+                  placeholder="500 ml" /></label
+              ><label
+                >Productfoto (PNG, JPEG of WebP, maximaal 2 MB)<input
+                  id="image-upload"
+                  type="file"
+                  accept="image/png,image/jpeg,image/webp" /></label
+              ><input type="hidden" name="image" /><img
+                id="image-preview"
+                alt="Productfoto"
+                hidden
+                style="max-width: 140px; max-height: 140px"
+              /><button type="button" id="image-remove" class="secondary">
+                Foto verwijderen</button
+              ><label
+                >Illustratiekleur<input
+                  name="color"
+                  type="color"
+                  value="#d3c6af" /></label
+              ><label
+                >Beschikbaarheid<select name="active">
+                  <option value="1">Zichtbaar</option>
+                  <option value="0">Verborgen</option>
+                </select></label
+              ><button class="button">Product opslaan</button>
+            </form>
+          </section>
+        </div>
+        <section class="panel">
+          <h2>Bestellingen</h2>
+          <label
+            >Zoeken op naam, e-mail of bestelnummer<input
+              id="order-search"
+              type="search"
+          /></label>
+          <div id="orders"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

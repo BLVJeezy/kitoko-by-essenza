@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kitoko by Essenza — Een klein ritueel, een heerlijke geur</title>
+    <meta
+      name="description"
+      content="Ontdek Kitoko by Essenza. Geuren voor je was en je thuis. Afhalen in Tongeren en Maasmechelen."
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="announcement">
+      Een beetje luxe, in elke was • Afhalen in Tongeren & Maasmechelen
+    </div>
+    <header>
+      <a class="brand" href="/">Kitoko<span>BY ESSENZA</span></a>
+      <nav>
+        <a href="#collection">De collectie</a><a href="#story">Ons verhaal</a
+        ><a href="#pickup">Afhalen</a>
+      </nav>
+      <button id="cart-open" class="bag">
+        Winkelmand <span id="count">0</span>
+      </button>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">LE ESSENZE DI VITA</div>
+          <h1>Een heerlijke geur.<br />Een gevoel van <em>thuis.</em></h1>
+          <p>
+            Maak van iets alledaags een klein verwenmoment. Ontdek geuren die je
+            was, je huis en je dag nét dat beetje mooier maken.
+          </p>
+          <a class="button" href="#collection"
+            >Ontdek de collectie <span>↗</span></a
+          >
+          <div class="hero-note">
+            Met liefde geselecteerd, dichtbij af te halen.
+          </div>
+        </div>
+        <div
+          class="hero-art"
+          aria-label="Decoratieve illustratie van een parfumfles"
+        >
+          <div class="sun"></div>
+          <div class="branch">✧</div>
+          <div class="bottle hero-bottle">
+            <div class="cap"></div>
+            <div class="label">
+              <small>LE ESSENZE DI VITA</small><strong>Kitoko</strong
+              ><i>by Essenza</i>
+              <hr />
+              <span>Il profumo di casa</span><small>WASPARFUM · 500 ml</small>
+            </div>
+          </div>
+          <span class="art-note">Kleine momenten.<br />Bijzondere geuren.</span>
+        </div>
+      </section>
+      <div class="benefits">
+        <span>✧ &nbsp; Een geur die bij je past</span
+        ><span>♡ &nbsp; Met zorg geselecteerd</span
+        ><span>⌂ &nbsp; Twee afhaalplaatsen in Limburg</span>
+      </div>
+      <section id="collection" class="collection">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">VIND JOUW FAVORIET</div>
+            <h2>Geuren om van te houden.</h2>
+          </div>
+          <p>
+            Van fris en zacht tot warm en bloemig.<br />Een klein beetje maakt
+            het verschil.
+          </p>
+        </div>
+        <div class="demo-banner">
+          Voorbeeldcollectie — producten en prijzen zijn nog niet geverifieerd.
+          Bestellingen zijn uitsluitend tests.
+        </div>
+        <div class="filters">
+          <div id="categories"></div>
+          <label class="search"
+            >Zoeken
+            <input id="search" type="search" placeholder="Jouw favoriete geur…"
+          /></label>
+        </div>
+        <div id="products" class="products"></div>
+        <p id="empty" hidden>Geen producten gevonden.</p>
+      </section>
+      <section id="story" class="story">
+        <div class="story-art">
+          <span>Een klein<br />beetje <em>geluk.</em></span>
+        </div>
+        <div>
+          <div class="eyebrow">DIT IS KITOKO</div>
+          <h2>Het zit in de<br />kleine dingen.</h2>
+          <p>
+            Fris gewassen lakens. Je favoriete trui. Dat vertrouwde gevoel
+            wanneer je thuiskomt. Bij Kitoko by Essenza geven we die kleine
+            momenten graag wat extra aandacht.
+          </p>
+          <p>
+            Ontdek op je gemak welke geur bij jou past. Wij helpen je graag
+            kiezen.
+          </p>
+          <a
+            href="https://www.instagram.com/kitoko.byessenza/"
+            target="_blank"
+            rel="noreferrer"
+            >Volg onze geurmomenten op Instagram ↗</a
+          >
+        </div>
+      </section>
+      <section id="pickup" class="pickup">
+        <div class="eyebrow">DICHTBIJ JOU</div>
+        <h2>Online kiezen. Dichtbij afhalen.</h2>
+        <p>
+          Kies Tongeren of Maasmechelen bij je bestelling.<br />Afhalen gebeurt
+          op afspraak; het exacte adres en tijdstip worden bevestigd.
+        </p>
+        <div><span>⌂ Tongeren</span><span>⌂ Maasmechelen</span></div>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="/">Kitoko<span>BY ESSENZA</span></a>
+      <p>Een heerlijke geur. Een gevoel van thuis.</p>
+      <a href="https://www.instagram.com/kitoko.byessenza/"
+        >Contact via Instagram ↗</a
+      ><a href="/admin">Beheer</a
+      ><small
+        >Conceptwebshop · geen echte betalingen · bedrijfsgegevens en juridische
+        pagina’s volgen voor lancering.</small
+      >
+    </footer>
+    <dialog id="product-dialog">
+      <button class="close" data-close="product-dialog" aria-label="Sluiten">
+        ×
+      </button>
+      <div id="product-detail"></div>
+    </dialog>
+    <dialog id="cart-dialog">
+      <button class="close" data-close="cart-dialog" aria-label="Sluiten">
+        ×
+      </button>
+      <h2>Jouw winkelmand</h2>
+      <div id="cart-items"></div>
+      <p id="cart-total" class="total"></p>
+      <form id="checkout">
+        <h3>Afhalen op jouw locatie</h3>
+        <p class="muted">
+          Dit is een testbestelling. Er wordt niets betaald of klaargezet.
+        </p>
+        <label
+          >Naam<input
+            name="name"
+            autocomplete="name"
+            required
+            maxlength="150" /></label
+        ><label
+          >E-mailadres<input
+            name="email"
+            type="email"
+            autocomplete="email"
+            required /></label
+        ><label
+          >Afhaalplaats<select name="pickup">
+            <option>Tongeren</option>
+            <option>Maasmechelen</option>
+          </select></label
+        ><button class="button" type="submit">Testbestelling plaatsen ↗</button>
+      </form>
+      <p id="checkout-result" role="status"></p>
+    </dialog>
+    <div id="toast" role="status"></div>
+  </body>
+</html>

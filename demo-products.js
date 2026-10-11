@@ -1,0 +1,52 @@
+export const demoRows = [
+  [
+    "Cotone",
+    "Wasparfum",
+    "Een zacht, fris geuridee voor je dagelijkse was.",
+    1995,
+    20,
+    "500 ml",
+    "#d3c6af",
+  ],
+  [
+    "Fior di Loto",
+    "Wasparfum",
+    "Een bloemig geuridee met een verfijnd karakter.",
+    1995,
+    16,
+    "500 ml",
+    "#b6b7a1",
+  ],
+  [
+    "Vaniglia",
+    "Wasparfum",
+    "Een warm geuridee voor een comfortabel thuis.",
+    1995,
+    12,
+    "500 ml",
+    "#c39d71",
+  ],
+  [
+    "Discovery set",
+    "Proefsets",
+    "Ontdek jouw favoriete geurfamilie.",
+    1295,
+    8,
+    "5 × 20 ml",
+    "#b9877b",
+  ],
+];
+export const demoProducts = demoRows.map(
+  ([name, category, description, price, stock, size, color], index) => ({
+    id: index + 1,
+    name,
+    category,
+    description,
+    price,
+    stock,
+    size,
+    color,
+    active: 1,
+    image: "",
+  }),
+);

@@ -1,0 +1,19 @@
+{
+  "name": "kitoko-by-essenza",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "admin": "node scripts/admin.js",
+    "build": "node --check app.js && node --check api/index.js && node --check public/app.js && node --check public/admin.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0"
+  }
+}
